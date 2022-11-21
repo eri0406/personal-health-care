@@ -1,0 +1,51 @@
+.top-page-header {
+	width: 100vw;
+	height: 20vh;
+	display: flex;
+	flex-direction: column;
+	padding: 5vh;
+	background-color: #FFFAFA;
+}
+
+.image-title {
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+}
+
+.health-icon {
+	width: 80vh;
+}
+
+.nav {
+	font-size: 18px;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.lists {
+	display: flex;
+	list-style: none;
+}
+
+.login {
+	text-decoration: none;
+	color: #708090;
+	background-color: #FFFFFF;
+	padding: 10px;
+	margin: 10px;
+	font-weight: lighter;
+	border: solid 1px #808080;
+	border-radius: 10px;
+}
+
+.sign-up {
+	text-decoration: none;
+	color: #708090;
+	background-color: #FFFFFF;
+	padding: 10px;
+	margin: 10px 50px 10px 10px;
+	font-weight: lighter;
+	border: solid 1px #808080;
+	border-radius: 10px;
+}
