@@ -1,0 +1,69 @@
+<%= render "share/header" %>
+
+<%= form_with  url: "#", class: 'registration-main', local: true do |f| %>
+
+<div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">体温</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_area :temperature, class:"input-temp", id:"temperature", placeholder:"例)36.5", maxlength:"5" %>
+</div>
+<div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">血圧</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <div class='input-name-wrap'>
+      <%= f.text_area :b_pressure_up, class:"input-bp", id:"b_pressure_up", placeholder:"例) 130" , maxlength:"4"%> /
+      <%= f.text_area :b_pressure_down, class:"input-bp", id:"b_pressure_down", placeholder:"例) 80",  maxlength:"4" %> mmHg
+    </div>
+  </div>
+<div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">脈拍</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_area :pulse, class:"input-pluse", id:"pulse", placeholder:"例)75", maxlength:"4" %> 回/分
+</div>
+<div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">体重</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_area :weight, class:"input-weight", id:"weight", placeholder:"例)60", maxlength:"4" %> kg
+</div>
+<div class="form-group">
+    <div class="sleep_id">
+     睡眠
+     <span class="indispensable">必須</span>
+    </div>
+   <%= f.collection_select(:shipping_fee_id, ShippingFee.all, :id, :shipping_fee, {}, {class:"select-box", id:"item-shipping-fee-status"}) %>
+</div>
+<div class="form-group">
+      <div class="weight-bold-text">
+        食事
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"eat-image" %>
+      </div>
+    </div>
+    
+<div class="form-group">
+    <div class='form-text-wrap'>
+      <label class="form-text">運動</label>
+      <span class="indispensable">必須</span>
+    </div>
+    <div class='input-text-wrap'>
+      <%= f.text_area :exercise_content, class:"input-exercise", id:"exercise_content", placeholder:"例)ウォーキング15分した" %>
+    </div>
+  </div>
+  <div class='sign-up-btn'>
+   <%= f.submit "編集する", class:"content-pink-btn" %>
+	 <%= f.submit "削除する", class:"content-pink-btn" %>
+  </div>
+<% end %>
