@@ -1,0 +1,18 @@
+.top-page-header {
+	width: 100vw;
+	height: 20vh;
+	display: flex;
+	flex-direction: column;
+	padding: 5vh;
+	background-color: #FFFAFA;
+}
+
+.image-title {
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+}
+
+.health-icon {
+	width: 80vh;
+}

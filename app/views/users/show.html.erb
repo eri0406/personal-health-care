@@ -1,0 +1,31 @@
+<div class="main">
+  <div class="inner">
+    <div class="user_wrap">
+      <h2 class="page-heading">
+        <%= "kennkouさん健康情報" %>
+      </h2>
+      <table class="table">
+        <tbody>
+          <tr>
+            <th class="table_col1">名前</th>
+            <td class="table_col2"><%= 名前 %></td>
+          </tr>
+          <tr>
+            <th class="table_col1">年齢</th>
+            <td class="table_col2"><%= 年齢 %>歳</td>
+          </tr>
+          <tr>
+            <th class="table_col1">性別</th>
+            <td class="table_col2"><%= 性別 %></td>
+          </tr>
+          <tr>
+            <th class="table_col1">健康に関する考え方</th>
+            <td class="table_col2"><%= 健康 %></td>
+          </tr>
+        </tbody>
+      </table>
+      <%=link_to '記録一覧へ戻る', "#", class:"back-btn" %>
+    </div>
+  </div>
+</div>
+    
