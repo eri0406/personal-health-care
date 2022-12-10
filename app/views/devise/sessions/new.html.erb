@@ -1,6 +1,6 @@
 <%= render "share/second_header" %>
 
-<%= form_with url: "#", class:'sessions-main',local: true do |f| %>
+<%= form_with model: @user, url: user_session_path, class:'sessions-main',local: true do |f| %>
 
 <div class='form-wrap'>
   <div class='form-header'>
