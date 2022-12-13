@@ -1,0 +1,100 @@
+/* 新規投稿  */
+
+
+.new-main{
+	background-color: #FFFAFA;
+	}
+
+.form-new-text{
+	color:#000080;
+	font-size: 15px;
+	margin-left:40vw;
+	padding: 15px;
+}
+
+.form-group {
+	width:80vw;
+	display:flex;
+	justify-content: center;
+	flex-direction:column;
+	margin-left: 30vw;
+	margin-right: 30vw;
+}
+
+.input-text-wrap {
+	margin-left: 10px;
+}
+
+.form-text{
+	width: 70%;
+  min-width: 800px;
+  height: 100%;
+	display:flex;
+	justify-content: center;
+	flex-direction: column;
+	margin-bottom: 15px;
+	margin-left: 40px;
+}
+
+.input-text{
+	width: 130px;
+  margin: 5px 20px 0 20px;
+  height: 48px;
+  line-height: 30px;
+  padding: 10px 16px 8px;
+	border-radius: 4px;
+  background: #fff;
+  font-size: 15px;
+  resize: none;
+}
+
+.select-box{
+	width: 130px;
+  margin: 5px 20px 0 20px;
+  height: 40px;
+  line-height: 30px;
+  padding: 10px 16px 8px;
+	border-radius: 4px;
+  background: #fff;
+  font-size: 15px;
+  resize: none;
+	background-color: #fff;
+}
+
+.input-exercise{
+	margin-top: 10px;
+	padding:  15px 5px 8px;
+	width: 350px;
+	height: 200px;
+	resize: none;
+	border-radius:5px;
+	border: 1px solid #ccc;
+}
+
+.content-btn{
+	width: 100%;
+}
+
+.record-btn{
+	border-radius:5px;
+	font-size:15px;
+	width: 20%;
+	background-color: #FF69B4;
+	border: 1px solid #faf9f9;
+	color: #f6f2f0;
+	cursor: pointer;
+	line-height: 30px;
+	padding: 5px 10px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: 40vw;
+}
+
+.click-upload{
+	font-size: 12px;
+	color: #000080;
+}
+
+.yellow{
+	background: linear-gradient(transparent 70%, #FF9999 70%);
+}

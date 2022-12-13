@@ -1,68 +1,77 @@
 <%= render "share/header" %>
 
-<%= form_with model: @manegement ,url: "#", class: 'registration-main', local: true do |f| %>
+<%= form_with model: @manegement ,url: "#", class: 'new-main', local: true do |f| %>
+
+<div class='form-new-wrap'>
+    <h3 class='form-new-text'>
+     <span class= "blue">※すべての項目を入力してください</span>
+    </h3>
+  </div>
 
 <div class="form-group">
     <div class='form-text-wrap'>
-      <label class="form-text">体温</label>
-      <span class="indispensable">必須</span>
+      <label class="form-text"><span class="yellow">体  温</span></label>
     </div>
-    <%= f.text_area :temperature, class:"input-temp", id:"temperature", placeholder:"例)36.5", maxlength:"5" %>
+    <div class='input-text-wrap'>
+    <%= f.text_area :temperature, class:"input-text", id:"temperature", placeholder:"例)36.5", maxlength:"5" %> ℃
+    </div>
 </div>
 <div class="form-group">
     <div class='form-text-wrap'>
-      <label class="form-text">血圧</label>
-      <span class="indispensable">必須</span>
+      <label class="form-text"><span class="yellow">血  圧</span></label>
     </div>
-    <div class='input-name-wrap'>
-      <%= f.text_area :b_pressure_up, class:"input-bp", id:"b_pressure_up", placeholder:"例) 130" , maxlength:"4"%> /
-      <%= f.text_area :b_pressure_down, class:"input-bp", id:"b_pressure_down", placeholder:"例) 80",  maxlength:"4" %> mmHg
+    <div class='input-text-wrap'>
+      <%= f.text_area :b_pressure_up, class:"input-text", id:"b_pressure_up", placeholder:"例) 130" , maxlength:"4"%> /
+      <%= f.text_area :b_pressure_down, class:"input-text", id:"b_pressure_down", placeholder:"例) 80",  maxlength:"4" %> mmHg
     </div>
   </div>
 <div class="form-group">
     <div class='form-text-wrap'>
-      <label class="form-text">脈拍</label>
-      <span class="indispensable">必須</span>
+      <label class="form-text"><span class="yellow">脈  拍</span></label>
     </div>
-    <%= f.text_area :pulse, class:"input-pluse", id:"pulse", placeholder:"例)75", maxlength:"4" %> 回/分
+     <div class='input-text-wrap'>
+    <%= f.text_area :pulse, class:"input-text", id:"pulse", placeholder:"例)75", maxlength:"4" %> 回/分
+    </div>
 </div>
 <div class="form-group">
     <div class='form-text-wrap'>
-      <label class="form-text">体重</label>
-      <span class="indispensable">必須</span>
+      <label class="form-text"><span class="yellow">体  重</span></label>
     </div>
-    <%= f.text_area :weight, class:"input-weight", id:"weight", placeholder:"例)60", maxlength:"4" %> kg
+     <div class='input-text-wrap'>
+    <%= f.text_area :weight, class:"input-text", id:"weight", placeholder:"例)60", maxlength:"4" %> kg
+    </div>
 </div>
 <div class="form-group">
-    <div class="sleep_id">
-     睡眠
-     <span class="indispensable">必須</span>
+    <div class="form-text">
+     <span class="yellow">睡  眠</span>
     </div>
-   <%= f.collection_select(:shipping_fee_id, ShippingFee.all, :id, :shipping_fee, {}, {class:"select-box", id:"item-shipping-fee-status"}) %>
+     <div class='input-text-wrap'>
+   <%= f.collection_select(:sleep_id, Sleep.all, :id, :name, {}, {class:"select-box"}) %>
+    </div>
 </div>
 <div class="form-group">
-      <div class="weight-bold-text">
-        食事
-        <span class="indispensable">必須</span>
+      <div class="form-text">
+        <span class="yellow">食  事</span>
       </div>
+       <div class='input-text-wrap'>
       <div class="click-upload">
         <p>
-          クリックしてファイルをアップロード
+          クリックしてファイルをアップロードして下さい
         </p>
         <%= f.file_field :image, id:"eat-image" %>
       </div>
+     </div>
     </div>
     
 <div class="form-group">
     <div class='form-text-wrap'>
-      <label class="form-text">運動</label>
-      <span class="indispensable">必須</span>
+      <label class="form-text"><span class="yellow">運  動</span></label>
     </div>
     <div class='input-text-wrap'>
       <%= f.text_area :exercise_content, class:"input-exercise", id:"exercise_content", placeholder:"例)ウォーキング15分した" %>
     </div>
   </div>
-  <div class='sign-up-btn'>
-   <%= f.submit "記録する", class:"content-pink-btn" %>
+  <div class='content-btn'>
+   <%= f.submit "記録する", class:"record-btn" %>
   </div>
 <% end %>

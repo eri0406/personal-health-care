@@ -84,6 +84,10 @@
 
 /* 新規登録画面  */
 
+.registration-main{
+	background-color: #FFFAFA;
+}
+
 .info-text {
 	margin-top: 0.5px;
 	font-size: small;
